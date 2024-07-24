@@ -1,0 +1,27 @@
+/* css reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /*
+  Since the default root element font size in most browsers is 
+  16px, using html { font-size: 62.5%; } makes the root element 
+  font size 10px, so everywhere else 1rem translates to 10px.
+
+  Therefore, if the user's browser uses defaults, then if you 
+  want 175px, then then use 17.5rem. 
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+	font-family: var(--font-family);
+}
+

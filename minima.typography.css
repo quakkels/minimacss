@@ -1,0 +1,23 @@
+/* Typography */
+
+h1, h2, h3 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+	margin: 2rem 0rem;
+}
+
+ul, ol {
+	margin: 2rem 0rem;
+}
+
+li {
+	margin-left: 2rem;
+}
+
+a, a:visited, a:active, a:focus, a:hover {
+	color: var(--text-color);
+	text-decoration: none;
+}

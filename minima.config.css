@@ -1,0 +1,21 @@
+/* configuration values */
+
+html {
+
+  /* colors */
+	--bg:					red;
+	--bg-content: pink;
+	--bg-accent:	yellow;
+	--text-color: black;
+	--text-color-accent: red;
+	--action-primary: orange;
+	--action-secondary: orange;
+
+	/* fonts */
+  --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+
+	/* */
+	--gutter: 2rem;
+	--border: 1px dotted black;
+	* {border: 1px dotted black;}
+}

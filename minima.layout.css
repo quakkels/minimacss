@@ -1,0 +1,35 @@
+/* layout */
+
+.header {
+	padding: var(--gutter);
+	background: var(--bg-accent);
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nav a:first-of-type {
+	display: flex;
+	align-items: center;
+}
+
+
+.gutter {
+	margin: var(--gutter);
+}
+
+.masthead {
+	background: var(--bg-accent);
+	text-align: center;
+}
+.masthead h1 {
+	font-size: calc(2rem + 2.7vw);
+}
+.masthead p {
+	font-size: calc(1rem + 1vw);
+	width:68vw;
+	margin:0 auto;
+}
