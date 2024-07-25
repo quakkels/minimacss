@@ -52,3 +52,21 @@
 	display:block;
 	width:33%;
 }
+.card img:first-of-type,
+.card svg:first-of-type{
+	margin: 0 auto;
+	display: block;
+}
+.card .frame {
+	border-radius: 1rem;
+	box-shadow: black 5px;
+	margin: var(--gutter);
+	padding: var(--gutter);
+	background: var(--bg-content)
+}
+.card .frame.transparent {
+	box-shadow: none;
+	background:none;
+}
+
+
