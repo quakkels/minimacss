@@ -4,13 +4,25 @@
 	padding: var(--gutter);
 	background: var(--bg-accent);
 }
+.row {
+	display: flex;
+	flex-direction:row;
+	max-width:100%;
+}
+.column {
+	display:flex;
+	flex-direction:column;
+}
+.justify-content-center {
+	justify-content:center;
+}
 
+/* navigation */
 .nav {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-
 .nav a:first-of-type {
 	display: flex;
 	align-items: center;
@@ -21,6 +33,7 @@
 	margin: var(--gutter);
 }
 
+/* masthead */
 .masthead {
 	background: var(--bg-accent);
 	text-align: center;
@@ -32,4 +45,10 @@
 	font-size: calc(1rem + 1vw);
 	width:68vw;
 	margin:0 auto;
+}
+
+/* cards */
+.card {
+	display:block;
+	width:33%;
 }
