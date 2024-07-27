@@ -1,9 +1,10 @@
 /* layout */
 
-.header {
+.header, .footer {
 	padding: var(--gutter);
 	background: var(--bg-accent);
 }
+
 .row {
 	display: flex;
 	flex-direction:row;
@@ -13,9 +14,16 @@
 	display:flex;
 	flex-direction:column;
 }
-.justify-content-center {
-	justify-content:center;
+
+.gutter {
+	margin: var(--gutter);
 }
+
+.center-self {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 /* navigation */
 .nav {
@@ -28,13 +36,9 @@
 	align-items: center;
 }
 
-
-.gutter {
-	margin: var(--gutter);
-}
-
 /* masthead */
 .masthead {
+	border: 1px solid transparent;
 	background: var(--bg-accent);
 	text-align: center;
 }
@@ -59,14 +63,24 @@
 }
 .card .frame {
 	border-radius: 1rem;
+	border: 1px solid transparent;
 	box-shadow: black 5px;
 	margin: var(--gutter);
 	padding: var(--gutter);
-	background: var(--bg-content)
+	background: var(--bg-content);
+	position: relative;
 }
 .card .frame.transparent {
 	box-shadow: none;
 	background:none;
 }
 
-
+.card .frame .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}

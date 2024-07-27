@@ -17,5 +17,5 @@ html {
 	/* */
 	--gutter: 2rem;
 	--border: 1px dotted black;
-	* {border: 1px dotted black;}
+/*	* {border: 1px dotted black;}i*/
 }
