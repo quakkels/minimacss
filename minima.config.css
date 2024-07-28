@@ -3,9 +3,9 @@
 html {
 
   /* colors */
-	--bg:					red;
+	--bg: red;
 	--bg-content: pink;
-	--bg-accent:	yellow;
+	--bg-accent: yellow;
 	--text-color: black;
 	--text-color-accent: red;
 	--action-primary: orange;
@@ -17,5 +17,5 @@ html {
 	/* */
 	--gutter: 2rem;
 	--border: 1px dotted black;
-/*	* {border: 1px dotted black;}i*/
+	--radius: 0.4rem;
 }

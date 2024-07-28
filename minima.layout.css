@@ -62,7 +62,7 @@
 	display: block;
 }
 .card .frame {
-	border-radius: 1rem;
+	border-radius: var(--radius);
 	border: 1px solid transparent;
 	box-shadow: black 5px;
 	margin: var(--gutter);

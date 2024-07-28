@@ -14,7 +14,7 @@ button, .button, a.button {
 	color: var(--text-color);
 	text-shadow:0px 0px 2rem hsl(from var(--action-primary) 360deg s 33.33%);
 	user-select:none;
-	border-radius: 1rem;
+	border-radius: var(--radius);
 }
 
 button:active, .button:active {

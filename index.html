@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="minima.layout.css">
 		<link rel="stylesheet" href="minima.typography.css">
 		<link rel="stylesheet" href="minima.buttons.css">
+		<link rel="stylesheet" href="minima.forms.css">
 	</head>
 	<body>
 		<header class="header">
@@ -115,23 +116,67 @@
 					<h2>Forms</h2>
 					<form>
 						<p>
-							<label>Email Address</label>
-							<input type="email" name="email" placeholder="Email">
+							<label for="email">Email Address</label>
+							<input type="email" name="email" id="email" placeholder="Email">
 						</p>
 						<p>
-							<label>Password</label>
-							<input type="password" name="password" placeholder="Email">
+							<label for="email">Disabled Email</label>
+							<input disabled type="email" name="email" id="email" placeholder="Email">
 						</p>
 						<p>
-							<label><input type="radio" name="password" value="1"> Option One</label>
-							<label><input type="radio" name="password" value="2"> Option Two</label>
-							<label><input type="radio" name="password" value="3"> Option Three</label>
-							<label><input type="radio" name="password" value="4"> Option Four</label>
-							<label><input type="radio" name="password" value="5"> Option Five</label>
-							<label><input type="radio" name="password" value="6"> Option Six</label>
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" placeholder="Password">
 						</p>
+						<p>
+							<label for="password">Disabled Password</label>
+							<input disabled type="password" name="password" id="password" placeholder="Password">
+						</p>
+						<p>
+							Pick one option
+						</p>
+						<p>
+							<label class="input-button"><input type="radio" name="option" value="1"> Option One</label>
+							<label class="input-button"><input type="radio" name="option" value="2"> Option Two</label>
+							<label class="input-button"><input type="radio" name="option" value="3"> Option Three</label>
+							<label class="input-button"><input type="radio" name="option" value="4"> Option Four</label>
+							<label class="input-button"><input type="radio" name="option" value="5"> Option Five</label>
+							<label class="input-button"><input disabled type="radio" name="option" value="6"> Disabled Option Six</label>
+						</p>
+						<p>
+							Pick all that apply
+						</p>
+						<p>
+							<label class="input-button"><input type="checkbox" name="checkbox" value="1"> Selection One</label>
+							<label class="input-button"><input type="checkbox" name="checkbox" value="2"> Selection Two</label>
+							<label class="input-button"><input type="checkbox" name="checkbox" value="3"> Selection Three</label>
+							<label class="input-button"><input disabled type="checkbox" name="checkbox" value="4"> Disabled Four</label>
+						</p>
+						<p>
+							Pick on option
+						</p>
+						<p>
+							<select name="dropdown">
+								<option value="val1">Value 1</option>
+								<option disabled value="val2">Value 2</option>
+								<option value="val3">Value 3</option>
+							</select>
+							<select disabled name="disableddropdown">
+								<option value="val1">Disabled Value 1</option>
+								<option value="val2">Disabled Value 2</option>
+								<option value="val3">Disabled Value 3</option>
+							</select>
+						</p>
+						<p>
+							Please describe something
+						</p>
+						<p>
+							<textarea name="description"></textarea>
+						<p>
+						<p>
+							<textarea disabled name="description">Disabled</textarea>
 						<p>
 							<button type="submit">Submit</button>
+							<button type="reset" class="transparent">Clear</button>
 						</p>
 					</form>
 				</div>
