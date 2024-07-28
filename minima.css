@@ -1,0 +1,514 @@
+/* configuration values */
+
+html {
+
+  /* colors */
+	--bg: red;
+	--bg-content: pink;
+	--bg-accent: yellow;
+	--text-color: black;
+	--text-color-accent: red;
+	--action-primary: orange;
+	--action-secondary: orange;
+
+	/* fonts */
+  --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+
+	/* */
+	--gutter: 2rem;
+	--border: 1px dotted black;
+	--radius: 0.4rem;
+}
+/* css reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /*
+  Since the default root element font size in most browsers is 
+  16px, using html { font-size: 62.5%; } makes the root element 
+  font size 10px, so everywhere else 1rem translates to 10px.
+
+  Therefore, if the user's browser uses defaults, then if you 
+  want 175px, then then use 17.5rem. 
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+	font-family: var(--font-family);
+}
+
+/* layout */
+
+.header, .footer {
+	padding: var(--gutter);
+	background: var(--bg-accent);
+}
+
+.row {
+	display: flex;
+	flex-direction:row;
+	max-width:100%;
+}
+.column {
+	display:flex;
+	flex-direction:column;
+}
+
+.gutter {
+	margin: var(--gutter);
+}
+
+.center-self {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* navigation */
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.nav a:first-of-type {
+	display: flex;
+	align-items: center;
+}
+
+/* masthead */
+.masthead {
+	border: 1px solid transparent;
+	background: var(--bg-accent);
+	text-align: center;
+}
+.masthead h1 {
+	font-size: calc(2rem + 2.7vw);
+}
+.masthead p {
+	font-size: calc(1rem + 1vw);
+	width:68vw;
+	margin:0 auto;
+}
+
+/* cards */
+.card {
+	display:block;
+	width:33%;
+}
+.card img:first-of-type,
+.card svg:first-of-type{
+	margin: 0 auto;
+	display: block;
+}
+.card .frame {
+	border-radius: var(--radius);
+	border: 1px solid transparent;
+	box-shadow: black 5px;
+	margin: var(--gutter);
+	padding: var(--gutter);
+	background: var(--bg-content);
+	position: relative;
+}
+.card .frame.transparent {
+	box-shadow: none;
+	background:none;
+}
+
+.card .frame .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/* Typography */
+
+h1, h2, h3 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+	margin: 2rem 0rem;
+}
+
+ul, ol {
+	margin: 2rem 0rem;
+}
+
+li {
+	margin-left: 2rem;
+}
+
+a, a:visited, a:active, a:focus, a:hover {
+	color: var(--action-primary);
+	text-decoration: none;
+}
+/* buttons */
+
+button, .button, a.button {
+	background-color: var(--action-primary);
+	border:none;
+	padding: 1rem 1.6rem;
+	margin: 0.4rem 0.2rem;
+	display: inline-block;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	font-size: 1.8rem;
+	font-weight:bold;
+	color: var(--text-color);
+	text-shadow:0px 0px 2rem hsl(from var(--action-primary) 360deg s 33.33%);
+	user-select:none;
+	border-radius: var(--radius);
+}
+
+button:active, .button:active {
+	background-color: var(--action-primary);
+}
+
+button.transparent, .button.transparent {
+	text-shadow: none;
+	background:none;
+}
+
+button.box-button, .button.box-button {
+	border-radius:0;
+	width: 100%;
+	margin: 0;
+}
+/* forms */
+
+input, label.input-button {
+	border:1px solid gray;
+}
+
+label.input-button {
+	cursor: pointer;
+}
+
+input,
+select,
+label.input-button {
+	padding: 1rem 1.6rem;
+	margin: 0.4rem 0.2rem;
+	display: inline-block;
+	font-size: 1.8rem;
+	color: var(--text-color);
+	border-radius: var(--radius);
+	background: transparent;
+	user-select: none;
+	outline:none;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+input:disabled,
+textarea:disabled {
+	background: #efefef;
+	border: 1px solid lightgray;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+	background: var(--action-primary);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	appearance: none;
+	border: 2px solid gray;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin:0;
+	padding:0;
+	border-radius: 50%;
+}
+input[type="checkbox"] {
+	border-radius: var(--radius);
+}
+
+textarea {
+	outline:none;
+	border-radius: var(--radius);
+	max-width: 100%;
+	width: 100%;
+	height:15vh;
+	font-family: var(--font-family);
+	font-size:inherit;
+	padding:var(--gutter);
+}
+
+/* configuration values */
+
+html {
+
+  /* colors */
+	--bg: red;
+	--bg-content: pink;
+	--bg-accent: yellow;
+	--text-color: black;
+	--text-color-accent: red;
+	--action-primary: orange;
+	--action-secondary: orange;
+
+	/* fonts */
+  --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+
+	/* */
+	--gutter: 2rem;
+	--border: 1px dotted black;
+	--radius: 0.4rem;
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /*
+  Since the default root element font size in most browsers is 
+  16px, using html { font-size: 62.5%; } makes the root element 
+  font size 10px, so everywhere else 1rem translates to 10px.
+
+  Therefore, if the user's browser uses defaults, then if you 
+  want 175px, then then use 17.5rem. 
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+	font-family: var(--font-family);
+}
+
+/* layout */
+
+.header, .footer {
+	padding: var(--gutter);
+	background: var(--bg-accent);
+}
+
+.row {
+	display: flex;
+	flex-direction:row;
+	max-width:100%;
+}
+.column {
+	display:flex;
+	flex-direction:column;
+}
+
+.gutter {
+	margin: var(--gutter);
+}
+
+.center-self {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* layout navigation */
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.nav a:first-of-type {
+	display: flex;
+	align-items: center;
+}
+
+/* layout masthead */
+
+.masthead {
+	border: 1px solid transparent;
+	background: var(--bg-accent);
+	text-align: center;
+}
+.masthead h1 {
+	font-size: calc(2rem + 2.7vw);
+}
+.masthead p {
+	font-size: calc(1rem + 1vw);
+	width:68vw;
+	margin:0 auto;
+}
+
+/* layout cards */
+
+.card {
+	display:block;
+	width:33%;
+}
+.card img:first-of-type,
+.card svg:first-of-type{
+	margin: 0 auto;
+	display: block;
+}
+.card .frame {
+	border-radius: var(--radius);
+	border: 1px solid transparent;
+	box-shadow: black 5px;
+	margin: var(--gutter);
+	padding: var(--gutter);
+	background: var(--bg-content);
+	position: relative;
+}
+.card .frame.transparent {
+	box-shadow: none;
+	background:none;
+}
+
+.card .frame .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+
+/* Typography */
+
+h1, h2, h3 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+	margin: 2rem 0rem;
+}
+
+ul, ol {
+	margin: 2rem 0rem;
+}
+
+li {
+	margin-left: 2rem;
+}
+
+a, a:visited, a:active, a:focus, a:hover {
+	color: var(--action-primary);
+	text-decoration: none;
+}
+
+/* buttons */
+
+button, .button, a.button {
+	background-color: var(--action-primary);
+	border:none;
+	padding: 1rem 1.6rem;
+	margin: 0.4rem 0.2rem;
+	display: inline-block;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	font-size: 1.8rem;
+	font-weight:bold;
+	color: var(--text-color);
+	text-shadow:0px 0px 2rem hsl(from var(--action-primary) 360deg s 33.33%);
+	user-select:none;
+	border-radius: var(--radius);
+}
+
+button:active, .button:active {
+	background-color: var(--action-primary);
+}
+
+button.transparent, .button.transparent {
+	text-shadow: none;
+	background:none;
+}
+
+button.box-button, .button.box-button {
+	border-radius:0;
+	width: 100%;
+	margin: 0;
+}
+
+/* forms */
+
+input, label.input-button {
+	border:1px solid gray;
+}
+
+label.input-button {
+	cursor: pointer;
+}
+
+input,
+select,
+label.input-button {
+	padding: 1rem 1.6rem;
+	margin: 0.4rem 0.2rem;
+	display: inline-block;
+	font-size: 1.8rem;
+	color: var(--text-color);
+	border-radius: var(--radius);
+	background: transparent;
+	user-select: none;
+	outline:none;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+input:disabled,
+textarea:disabled {
+	background: #efefef;
+	border: 1px solid lightgray;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+	background: var(--action-primary);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	appearance: none;
+	border: 2px solid gray;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin:0;
+	padding:0;
+	border-radius: 50%;
+}
+input[type="checkbox"] {
+	border-radius: var(--radius);
+}
+
+textarea {
+	outline:none;
+	border-radius: var(--radius);
+	max-width: 100%;
+	width: 100%;
+	height:15vh;
+	font-family: var(--font-family);
+	font-size:inherit;
+	padding:var(--gutter);
+}
+

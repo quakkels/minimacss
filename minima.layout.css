@@ -24,8 +24,8 @@
 	margin-right: auto;
 }
 
+/* layout navigation */
 
-/* navigation */
 .nav {
 	display: flex;
 	flex-direction: row;
@@ -36,7 +36,8 @@
 	align-items: center;
 }
 
-/* masthead */
+/* layout masthead */
+
 .masthead {
 	border: 1px solid transparent;
 	background: var(--bg-accent);
@@ -51,7 +52,8 @@
 	margin:0 auto;
 }
 
-/* cards */
+/* layout cards */
+
 .card {
 	display:block;
 	width:33%;
@@ -84,3 +86,4 @@
     z-index: 1;
     content: "";
 }
+
