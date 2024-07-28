@@ -27,7 +27,7 @@ input:invalid {
 }
 
 input:disabled,
-input:disabled {
+textarea:disabled {
 	background: #efefef;
 	border: 1px solid lightgray;
 }
