@@ -9,8 +9,8 @@ input:is(:-webkit-autofill, :autofill),
 select,
 label.input-button,
 textarea{
-	background: var(--bg-input) !important;
-	border: var(--border-input) ;
+	background: var(--bg-input);
+	border: var(--border-input);
 	color: var(--text-input);
 	padding: 1rem 1.6rem;
 	margin: 0.4rem 0.2rem;
@@ -36,8 +36,8 @@ input[type="checkbox"]:disabled {
 	cursor: default;
 }
 
-input[type="radio"]:checked,
-input[type="checkbox"]:checked {
+label input[type="radio"]:checked,
+label input[type="checkbox"]:checked {
 	background: var(--action-primary);
 }
 

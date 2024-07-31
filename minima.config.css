@@ -1,6 +1,6 @@
 /* configuration values */
 
-html {
+:root {
 
   /* general */
 	--bg: #444;
@@ -11,12 +11,12 @@ html {
   --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
 	/* forms */
-	--bg-input: hsl(from var(--bg-content) 360deg s 33.33%);
+	--bg-input: hsl(from var(--bg-content) h s 33.33%);
 	--bg-input-disabled: var(--bg-content)
-	--border-input: 1px solid hsl(from var(--bg-content) 360deg s 33.33%);
-	--border-input-disabled: 1px solid hsl(from var(--bg-content) 360deg s 33.33%);
+	--border-input: 1px solid hsl(from var(--bg-content) h s 33.33%);
+	--border-input-disabled: 1px solid hsl(from var(--bg-content) h s 33.33%);
 	--text-input: var(--text-color);
-	--text-input-disabled: hsl(from var(--bg-content) 360deg s 33.33%);
+	--text-input-disabled: hsl(from var(--bg-content) h s 33.33%);
 
 	/* layout */
 	--gutter: 2rem;
