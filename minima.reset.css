@@ -23,5 +23,7 @@ body {
   box-sizing: border-box;
   font-size: 1.6rem;
 	font-family: var(--font-family);
+	color: var(--text-color);
+	background: var(--bg);
 }
 
