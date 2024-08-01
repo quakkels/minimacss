@@ -12,9 +12,10 @@
 
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
-	--bg-input-disabled: var(--bg-content)
-	--border-input: 1px solid hsl(from var(--bg-content) h s 33.33%);
-	--border-input-disabled: 1px solid hsl(from var(--bg-content) h s 33.33%);
+	--bg-input-disabled: var(--bg-content);
+	--border-input-color: hsl(from var(--bg-content) h s 20%);	
+	--border-input: 1px solid var(--border-input-color);
+	--border-input-disabled: 1px solid var(--border-input-color);
 	--text-input: var(--text-color);
 	--text-input-disabled: hsl(from var(--bg-content) h s 33.33%);
 
