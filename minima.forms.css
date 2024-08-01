@@ -1,3 +1,4 @@
+
 /* forms */
 
 /* Change autocomplete styles in WebKit */
@@ -44,6 +45,7 @@ input:invalid {
 input:disabled,
 textarea:disabled,
 label.input-button:has(> input:disabled),
+select:disabled,
 input[type="radio"]:disabled,
 input[type="checkbox"]:disabled {
 	background: var(--bg-input-disabled);
