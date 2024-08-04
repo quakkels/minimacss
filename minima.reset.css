@@ -10,22 +10,21 @@
 }
 
 html {
-  /*
-  Since the default root element font size in most browsers is 
-  16px, using html { font-size: 62.5%; } makes the root element 
-  font size 10px, so everywhere else 1rem translates to 10px.
-
-  Therefore, if the user's browser uses defaults, then if you 
-  want 175px, then then use 17.5rem. 
-  */
-  font-size: 62.5%;
+  font-size: 100%; /* honor user defaults */
 }
 
 body {
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1rem;
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background: var(--bg);
+}
+
+input,
+textarea {
+	font: inherit;
+	letter-spacing: inherit;
+	word-spacing: inherit;
 }
 

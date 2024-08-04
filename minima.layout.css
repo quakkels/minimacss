@@ -25,6 +25,10 @@
 	margin-right: auto;
 }
 
+.region {
+	border: 1px solid transparent;
+}
+
 /* layout navigation */
 
 .nav {
