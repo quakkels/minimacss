@@ -28,10 +28,9 @@
 	grid-template-columns: repeat(6, 1fr);
 }
 
-.is-two-columns {	grid-column: span 2; }
-.is-three-columns {	grid-column: span 3; }
-.is-four-columns {	grid-column: span 4; }
-.is-five-columns {	grid-column: span 5; }
-.is-six-columns {	grid-column: span 6; }
+.as-two-columns {	grid-column: span 2; }
+.as-three-columns {	grid-column: span 3; }
+.as-four-columns {	grid-column: span 4; }
+.as-five-columns {	grid-column: span 5; }
+.as-six-columns {	grid-column: span 6; }
 
-.is-fill-space { width:100% }
