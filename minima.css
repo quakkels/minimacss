@@ -37,23 +37,22 @@
 }
 
 html {
-  /*
-  Since the default root element font size in most browsers is 
-  16px, using html { font-size: 62.5%; } makes the root element 
-  font size 10px, so everywhere else 1rem translates to 10px.
-
-  Therefore, if the user's browser uses defaults, then if you 
-  want 175px, then then use 17.5rem. 
-  */
-  font-size: 62.5%;
+  font-size: 100%; /* honor user defaults */
 }
 
 body {
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1rem;
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background: var(--bg);
+}
+
+input,
+textarea {
+	font: inherit;
+	letter-spacing: inherit;
+	word-spacing: inherit;
 }
 
 
@@ -67,8 +66,10 @@ body {
 .row {
 	display: flex;
 	flex-direction:row;
+	flex-wrap:wrap;
 	max-width:100%;
 }
+
 .column {
 	display:flex;
 	flex-direction:column;
@@ -79,8 +80,13 @@ body {
 }
 
 .center-self {
+	display:block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.region {
+	border: 1px solid transparent;
 }
 
 /* layout navigation */
@@ -89,6 +95,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .nav a:first-of-type {
 	display: flex;
@@ -147,6 +154,11 @@ body {
     content: "";
 }
 
+@media only screen and (max-width: 767px) {
+	.card { width: 100% }
+}
+
+
 
 /* Typography */
 
@@ -178,16 +190,15 @@ a, a:visited, a:active, a:focus, a:hover {
 button, .button, a.button {
 	background-color: var(--action-primary);
 	border:none;
-	padding: 1rem 1.6rem;
+	padding: 0.75rem 1.25rem;
 	margin: 0.4rem 0.2rem;
 	display: inline-block;
 	text-decoration:none;
 	text-align:center;
 	cursor:pointer;
-	font-size: 1.8rem;
-	font-weight:bold;
+	font-size: 1.25rem;
 	color: var(--text-color);
-	text-shadow:0px 0px 2rem hsl(from var(--action-primary) 360deg s 33.33%);
+	text-shadow:0px 0px 1rem hsl(from var(--action-primary) h s 0%);
 	user-select:none;
 	border-radius: var(--radius);
 }
@@ -225,6 +236,10 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px var(--bg-input) inset;
 }
 
+label {
+	display: block;
+}
+
 label.input-button {
 	cursor: pointer;
 }
@@ -238,10 +253,9 @@ textarea{
 	background: var(--bg-input);
 	border: var(--border-input);
 	color: var(--text-input);
-	padding: 1rem 1.6rem;
+	padding: 0.5rem 1rem;
 	margin: 0.4rem 0.2rem;
 	display: inline-block;
-	font-size: 1.8rem;
 	border-radius: var(--radius);
 	user-select: none;
 	outline:none;
@@ -263,6 +277,11 @@ input[type="checkbox"]:disabled {
 	cursor: default;
 }
 
+label input[type="radio"]:checked:disabled,
+label input[type="checkbox"]:checked:disabled {
+	background: hsl(from var(--action-primary) h 50% 33%);
+}
+
 label input[type="radio"]:checked,
 label input[type="checkbox"]:checked {
 	background: var(--action-primary);
@@ -272,8 +291,8 @@ input[type="radio"],
 input[type="checkbox"] {
 	appearance: none;
 	border: 2px solid gray;
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 1rem;
+	height: 1rem;
 	margin:0;
 	padding:0;
 	border-radius: 50%;
@@ -291,6 +310,7 @@ textarea {
 	font-family: var(--font-family);
 	font-size:inherit;
 	padding:var(--gutter);
+	margin:0;
 }
 
 
@@ -299,52 +319,30 @@ textarea {
 .grid-container {
 	display: grid;
 	gap: var(--gutter);
-	grid-auto-rows: minmax(100px, auto);
 }
 
-.with-two-columns{
-	grid-template-columns: repeat(2, 1fr);
+.with-two-columns   { grid-template-columns: repeat(2, 1fr); }
+.with-three-columns { grid-template-columns: repeat(3, 1fr); }
+.with-four-columns  { grid-template-columns: repeat(4, 1fr); }
+.with-five-columns  { grid-template-columns: repeat(5, 1fr); }
+.with-six-columns   { grid-template-columns: repeat(6, 1fr); }
+
+.as-two-columns   { grid-column: span 2; }
+.as-three-columns { grid-column: span 3; }
+.as-four-columns  { grid-column: span 4; }
+.as-five-columns  { grid-column: span 5; }
+.as-six-columns   { grid-column: span 6; }
+
+@media only screen and (max-width: 767px) {
+	.with-two-columns   { grid-template-columns: repeat(1, 1fr); }
+	.with-three-columns { grid-template-columns: repeat(1, 1fr); }
+	.with-four-columns  { grid-template-columns: repeat(1, 1fr); }
+	.with-five-columns  { grid-template-columns: repeat(1, 1fr); }
+	.with-six-columns   { grid-template-columns: repeat(1, 1fr); }
+
+	.as-two-columns   { grid-column: span 1; }
+	.as-three-columns { grid-column: span 1; }
+	.as-four-columns  { grid-column: span 1; }
+	.as-five-columns  { grid-column: span 1; }
+	.as-six-columns   { grid-column: span 1; }
 }
-
-.with-three-columns{
-	grid-template-columns: repeat(3, 1fr);
-}
-
-
-
-.grid-container div {
-	border: 1px dotted pink;
-	color:black;
-}
-/*
-.one {
-	grid-column: 1 / 3;
-	grid-row: 1;
-}
-
-.two {
-	grid-column: 2 / 4;
-	grid-row: 1 / 3;
-}
-
-.three {
-	grid-column: 1;
-	grid-row: 2 / 5;
-}
-
-.four {
-	grid-column: 3;
-	grid-row: 3;
-}
-
-.five {
-	grid-column: 2;
-	grid-row: 4;
-}
-
-.six {
-	grid-column: 3;
-	grid-row: 4;
-}
-*/
-
