@@ -4,33 +4,30 @@
 .grid-container {
 	display: grid;
 	gap: var(--gutter);
-	grid-auto-rows: minmax(auto, auto);
-	grid-template-rows: masonry;
 }
 
-.with-two-columns{
-	grid-template-columns: repeat(2, 1fr);
+.with-two-columns   { grid-template-columns: repeat(2, 1fr); }
+.with-three-columns { grid-template-columns: repeat(3, 1fr); }
+.with-four-columns  { grid-template-columns: repeat(4, 1fr); }
+.with-five-columns  { grid-template-columns: repeat(5, 1fr); }
+.with-six-columns   { grid-template-columns: repeat(6, 1fr); }
+
+.as-two-columns   { grid-column: span 2; }
+.as-three-columns { grid-column: span 3; }
+.as-four-columns  { grid-column: span 4; }
+.as-five-columns  { grid-column: span 5; }
+.as-six-columns   { grid-column: span 6; }
+
+@media only screen and (max-width: 767px) {
+	.with-two-columns   { grid-template-columns: repeat(1, 1fr); }
+	.with-three-columns { grid-template-columns: repeat(1, 1fr); }
+	.with-four-columns  { grid-template-columns: repeat(1, 1fr); }
+	.with-five-columns  { grid-template-columns: repeat(1, 1fr); }
+	.with-six-columns   { grid-template-columns: repeat(1, 1fr); }
+
+	.as-two-columns   { grid-column: span 1; }
+	.as-three-columns { grid-column: span 1; }
+	.as-four-columns  { grid-column: span 1; }
+	.as-five-columns  { grid-column: span 1; }
+	.as-six-columns   { grid-column: span 1; }
 }
-
-.with-three-columns{
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.with-four-columns{
-	grid-template-columns: repeat(4, 1fr);
-}
-
-.with-five-columns{
-	grid-template-columns: repeat(5, 1fr);
-}
-
-.with-six-columns{
-	grid-template-columns: repeat(6, 1fr);
-}
-
-.as-two-columns {	grid-column: span 2; }
-.as-three-columns {	grid-column: span 3; }
-.as-four-columns {	grid-column: span 4; }
-.as-five-columns {	grid-column: span 5; }
-.as-six-columns {	grid-column: span 6; }
-
