@@ -22,10 +22,10 @@ MinimaCSS uses `rem` size values. Given the default values in
 
 ## Todo
 
-- [ ] grid/masonry styles and demo (multi column example)
-- [ ] flex styles supporting multi 'columns'
+- [x] grid/masonry styles and demo (multi column example)
+- [x] flex styles supporting multi 'columns'
+- [x] mobile styles using media queries and/or contaienr queries
+- [ ] dynamic call-to-action button styles and demo
 - [ ] refine configuration variable names for clarity
 - [ ] document configuration values
-- [ ] dynamic call-to-action button styles and demo
-- [ ] mobile styles using media queries and/or contaienr queries
 
