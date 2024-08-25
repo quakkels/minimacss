@@ -25,6 +25,9 @@ MinimaCSS uses `rem` size values. Given the default values in
 - [x] grid/masonry styles and demo (multi column example)
 - [x] flex styles supporting multi 'columns'
 - [x] mobile styles using media queries and/or contaienr queries
+- [ ] error message block style
+- [ ] table style
+- [ ] scrollbar style
 - [ ] dynamic call-to-action button styles and demo
 - [ ] refine configuration variable names for clarity
 - [ ] document configuration values
