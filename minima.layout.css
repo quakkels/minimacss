@@ -64,7 +64,6 @@
 /* layout cards */
 
 .card {
-	display:block;
 	width:33%;
 }
 .card img:first-of-type,
@@ -75,7 +74,7 @@
 .card .frame {
 	border-radius: var(--radius);
 	border: 1px solid transparent;
-	box-shadow: black 5px;
+	box-shadow: black 0.1rem 0.1rem .5rem;
 	margin: var(--gutter);
 	padding: var(--gutter);
 	background: var(--bg-content);

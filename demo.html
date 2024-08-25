@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="minima.buttons.css">
 		<link rel="stylesheet" href="minima.forms.css">
 		<link rel="stylesheet" href="minima.grid.css">
+		<link rel="stylesheet" href="minima.messages.css">
 	</head>
 	<body id="top">
 		<header class="header">
@@ -29,6 +30,7 @@
 				<a class="button" href="#cards">Cards</a>
 				<a class="button" href="#grid">Grid</a>
 				<a class="button" href="#forms">Forms</a>
+				<a class="button" href="#messages">Messages</a>
 				<a class="button" href="#footer">Footer</a>
 			</nav>
 		</header>
@@ -164,77 +166,124 @@
 			<section id="forms">
 				<div style="width:60vw;" class="gutter center-self">
 					<h2>Forms</h2>
-					<form class="grid-container with-two-columns">
-						<div>
-							<label for="email">Email Address</label>
-							<input type="email" name="email" id="email" placeholder="Email">
+					<form>
+						<div class="grid-container with-two-columns">
+							<p>
+								<label for="email">Email Address</label>
+								<input type="email" name="email" id="email" placeholder="Email">
+							</p>
+							<p>
+								<label for="email">Required Email Address</label>
+								<input required type="email" name="email" id="email" placeholder="Email">
+							</p>
 						</div>
-						<div>
-							<label for="email">Disabled Email</label>
-							<input disabled type="email" name="email" id="email" placeholder="Email">
+						<div class="grid-container">
+							<p>
+								<label for="email">Disabled Email</label>
+								<input disabled type="email" name="email" id="email" placeholder="Email">
+							</p>
 						</div>
-						<p>
-							<label for="password">Password</label>
-							<input type="password" name="password" id="password" placeholder="Password">
-						</p>
-						<div>
-							<label for="password">Disabled Password</label>
-							<input disabled type="password" name="password" id="password" placeholder="Password">
-						</div>
-						<div>
-							Pick one option
-						</div>
-						<div>
-							<label class="input-button"><input type="radio" name="option" value="1"> Option One</label>
-							<label class="input-button"><input type="radio" name="option" value="2"> Option Two</label>
-							<label class="input-button"><input type="radio" name="option" value="3"> Option Three</label>
-							<label class="input-button"><input type="radio" name="option" value="4"> Option Four</label>
-							<label class="input-button"><input type="radio" name="option" value="5"> Option Five</label>
-							<label class="input-button"><input disabled type="radio" name="option" value="6"> Disabled Option Six</label>
-						</div>
-						<div>
-							Pick all that apply
-						</div>
-						<div>
-							<label class="input-button"><input type="checkbox" name="checkbox" value="1"> Selection One</label>
-							<label class="input-button"><input type="checkbox" name="checkbox" value="2"> Selection Two</label>
-							<label class="input-button"><input type="checkbox" name="checkbox" value="3"> Selection Three</label>
-							<label class="input-button"><input disabled type="checkbox" name="checkbox" value="4"> Disabled Four checked</label>
-							<label class="input-button"><input disabled type="checkbox" name="checkbox" value="5" checked> Disabled Five</label>
-						</div>
-						<div>
-							Pick on option
-						</div>
-						<div>
-							<select name="dropdown">
-								<option value="val1">Value 1</option>
-								<option disabled value="val2">Value 2</option>
-								<option value="val3">Value 3</option>
-							</select>
-							<select disabled name="disableddropdown">
-								<option value="val1">Disabled Value 1</option>
-								<option value="val2">Disabled Value 2</option>
-								<option value="val3">Disabled Value 3</option>
-							</select>
-						</div>
-						<div>
-							Please describe something
-						</div>
-						<div>
-							<textarea name="description"></textarea>
-						</div>
+						<div class="grid-container with-two-columns">
+							<p>
+								<label for="password">Password</label>
+								<input type="password" name="password" id="password" placeholder="Password">
+							</p>
+							<p>
+								<label for="password">Disabled Password</label>
+								<input disabled type="password" name="password" id="password" placeholder="Password">
+							</p>
+							<div>
+								Pick one option
+							</div>
+							<div>
+								<label class="input-button"><input type="radio" name="option" value="1"> Option One</label>
+								<label class="input-button"><input type="radio" name="option" value="2"> Option Two</label>
+								<label class="input-button"><input type="radio" name="option" value="3"> Option Three</label>
+								<label class="input-button"><input type="radio" name="option" value="4"> Option Four</label>
+								<label class="input-button"><input type="radio" name="option" value="5"> Option Five</label>
+								<label class="input-button"><input disabled type="radio" name="option" value="6"> Disabled Option Six</label>
+							</div>
+							<div>
+								Pick all that apply
+							</div>
+							<div>
+								<label class="input-button"><input type="checkbox" name="checkbox" value="1"> Selection One</label>
+								<label class="input-button"><input type="checkbox" name="checkbox" value="2"> Selection Two</label>
+								<label class="input-button"><input type="checkbox" name="checkbox" value="3"> Selection Three</label>
+								<label class="input-button"><input disabled type="checkbox" name="checkbox" value="4"> Disabled Four checked</label>
+								<label class="input-button"><input disabled type="checkbox" name="checkbox" value="5" checked> Disabled Five</label>
+							</div>
+							<div>
+								Pick on option
+							</div>
+							<div>
+								<select name="dropdown">
+									<option value="val1">Value 1</option>
+									<option disabled value="val2">Value 2</option>
+									<option value="val3">Value 3</option>
+								</select>
+								<select disabled name="disableddropdown">
+									<option value="val1">Disabled Value 1</option>
+									<option value="val2">Disabled Value 2</option>
+									<option value="val3">Disabled Value 3</option>
+								</select>
+							</div>
+							<div>
+								Please describe something
+							</div>
+							<div>
+								<textarea name="description"></textarea>
+							</div>
 						<div></div>
-						<div>
-							<textarea disabled name="description">Disabled</textarea>
-						</div>
-						<div class="is-two-columns">
-							<button type="submit">Submit</button>
-							<button type="reset" class="transparent">Clear</button>
+							<div>
+								<textarea disabled name="description">Disabled</textarea>
+							</div>
+							<div class="is-two-columns">
+								<button type="submit">Submit</button>
+								<button type="reset" class="transparent">Clear</button>
+							</div>
 						</div>
 					<form>
 				</div>
 			</section>
-			</main>
+			<section class="region" style="background: var(--bg-accent);" id="messages">
+				<div style="width:70vw;" class="gutter center-self">
+					<h2>Messages</h2>
+					<p>Informational and warning messages:</p>
+					<div class="info">
+						<div class="gutter">
+							<p>
+								This is an informational block.
+							</p>
+							<ul>
+								<li>MinimaCSS is not a framework, nor is it a library.</li>
+								<li>These styles don't depend on JavaScript.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="warn">
+						<div class="gutter">
+							<p>
+								This is a warning block.
+							</p>
+							<ul>
+								<li>Lookout</li>
+								<li>Watch it!</li>
+							</ul>
+						</div>
+					</div>
+					<p>Error messages:</p>
+					<div class="errors">
+						<ul>
+							<li>Email address is required.</li>
+							<li>Please enter a valid phone number.</li>
+							<li>Please enter a DOB <em>after</em> 1900AD.</li>
+							<li>Narwals aren't real and don't try to tell me otherwise.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
 		<footer class="footer" id="footer">
 			<div class="row">
 				<div class="card">

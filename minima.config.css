@@ -11,6 +11,17 @@
 	--action-primary: cornflowerblue;
   --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
+	/* messages */
+	--color-info: #eee;
+	--color-border-info: #ccf;
+	--color-bg-info: #00AEEF;
+	--color-warn: #024;
+	--color-border-warn: #ffc;
+	--color-bg-warn: #FFF568;
+	--color-error: #eee;
+	--color-border-error: #fdd;
+	--color-bg-error: #f33;
+
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
 	--bg-input-disabled: var(--bg-content);

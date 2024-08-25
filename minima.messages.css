@@ -1,0 +1,30 @@
+
+/* Messages */
+
+div.errors {
+	text-transform: uppercase;
+	color: var(--color-error);
+	border: 2px solid var(--color-border-error);
+	border-radius: var(--radius);
+	background: var(--color-bg-error);
+	margin-top:var(--gutter);
+	margin-bottom:var(--gutter);
+}
+
+div.info {
+	color: var(--color-info);
+	border: 2px solid var(--color-border-info);
+	border-radius: var(--radius);
+	background: var(--color-bg-info);
+	margin-top:var(--gutter);
+	margin-bottom:var(--gutter);
+}
+
+div.warn {
+	color: var(--color-warn);
+	border: 2px solid var(--color-border-warn);
+	border-radius: var(--radius);
+	background: var(--color-bg-warn);
+	margin-top:var(--gutter);
+	margin-bottom:var(--gutter);
+}

@@ -11,6 +11,17 @@
 	--action-primary: cornflowerblue;
   --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
+	/* messages */
+	--color-info: #eee;
+	--color-border-info: #ccf;
+	--color-bg-info: #00AEEF;
+	--color-warn: #024;
+	--color-border-warn: #ffc;
+	--color-bg-warn: #FFF568;
+	--color-error: #eee;
+	--color-border-error: #fdd;
+	--color-bg-error: #f33;
+
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
 	--bg-input-disabled: var(--bg-content);
@@ -121,7 +132,6 @@ textarea {
 /* layout cards */
 
 .card {
-	display:block;
 	width:33%;
 }
 .card img:first-of-type,
@@ -132,7 +142,7 @@ textarea {
 .card .frame {
 	border-radius: var(--radius);
 	border: 1px solid transparent;
-	box-shadow: black 5px;
+	box-shadow: black 0.1rem 0.1rem .5rem;
 	margin: var(--gutter);
 	padding: var(--gutter);
 	background: var(--bg-content);
@@ -162,12 +172,15 @@ textarea {
 
 /* Typography */
 
+body {
+  color: var(--text-color);
+}
+
 h1, h2, h3 {
   color: var(--text-color);
 }
 
 p {
-  color: var(--text-color);
 	margin: 2rem 0rem;
 }
 
@@ -345,4 +358,34 @@ textarea {
 	.as-four-columns  { grid-column: span 1; }
 	.as-five-columns  { grid-column: span 1; }
 	.as-six-columns   { grid-column: span 1; }
+}
+
+/* Messages */
+
+div.errors {
+	text-transform: uppercase;
+	color: var(--color-error);
+	border: 2px solid var(--color-border-error);
+	border-radius: var(--radius);
+	background: var(--color-bg-error);
+	margin-top:var(--gutter);
+	margin-bottom:var(--gutter);
+}
+
+div.info {
+	color: var(--color-info);
+	border: 2px solid var(--color-border-info);
+	border-radius: var(--radius);
+	background: var(--color-bg-info);
+	margin-top:var(--gutter);
+	margin-bottom:var(--gutter);
+}
+
+div.warn {
+	color: var(--color-warn);
+	border: 2px solid var(--color-border-warn);
+	border-radius: var(--radius);
+	background: var(--color-bg-warn);
+	margin-top:var(--gutter);
+	margin-bottom:var(--gutter);
 }

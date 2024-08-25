@@ -1,12 +1,15 @@
 
 /* Typography */
 
+body {
+  color: var(--text-color);
+}
+
 h1, h2, h3 {
   color: var(--text-color);
 }
 
 p {
-  color: var(--text-color);
 	margin: 2rem 0rem;
 }
 
