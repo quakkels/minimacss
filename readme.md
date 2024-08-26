@@ -3,7 +3,7 @@
 The anti-dependency "dependency."
 
 MinimaCSS is not intended to be treated as a library or framework. In fact, 
-you might say that MinimaCSS is an anti-dependency. Rather, it is a launching 
+you might say that MinimaCSS is an anti-dependency. It is a launching 
 point for your CSS. It's a skeleton of styles designed to provide a simple 
 start that acts as a springboard. 
 
