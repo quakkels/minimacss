@@ -16,14 +16,18 @@ unique needs.
 
 ## Getting Started
 
-MinimaCSS provides default styles with customizable variables (located 
-in [minima.config.css]()) to get your design up and running quickly.
+1. Download [minima.css](minima.css) and save it to your styles folder.
+2. Include the style in your html header with `<link rel="stylesheet" href="/{your styles folder}/minima.css">`
+3. Use [demo.html](demo.html) as a reference for how the different design elements are used.
 
-Duplicate the repo and start changing anything you want.
+## Features
 
-MinimaCSS uses `rem` size values. Given the default values in 
-[minima.reset.css](), `1.6rem` will be equivalent to `16px`.
-
+MinimaCSS supports many design elements such as:
+- Cards
+- Columnar Grid
+- Forms
+- Buttons
+- Message Blocks
 
 ## Configuration
 
@@ -40,6 +44,11 @@ for a border, then use `--color-border`. Then, suppose you need the color of a
 border for a form input, look for `--color-border-input`. Then, suppose you 
 need the color of a border for an input element that is in an error state, 
 look for `--color-border-input-error`.
+
+### Variables
+
+MinimaCSS uses `rem` size values. Given the default values in 
+[minima.reset.css](), `1.6rem` will be equivalent to `16px`.
 
 - `--gutter` Used to set the gap between layout boxes.
 
