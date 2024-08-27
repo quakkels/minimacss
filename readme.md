@@ -2,27 +2,27 @@
 
 The anti-dependency "dependency."
 
-MinimaCSS is not intended to be treated as a library or framework. In fact, 
-you might say that MinimaCSS is an anti-dependency. It is a launching 
-point for your CSS. It's a skeleton of styles designed to provide a simple 
-start that acts as a springboard. 
+MinimaCSS is not intended to be treated as a library or framework. It is a 
+launching point for your CSS. It's a skeleton of styles designed to provide a 
+simple start that acts as a springboard. 
 
-Basic decisions have already been made, though anything can be revisited. It 
-is closer to a reference resource than it is to a library or framework. It may 
-help to consider every MinimaCSS instance as a fork of the original project. 
-Once forked, it's yours, build it up and modify it according to your own app's 
-unique needs.
+Basic decisions have already been made, though anything can be revisited. 
+MinimaCSS is closer to a reference resource than it is to a library or 
+framework. It may help to consider every MinimaCSS instance as a fork of the 
+original project. Once forked, it's yours, build it up and modify it according 
+to your own app's unique needs.
 
 
 ## Getting Started
 
 1. Download [minima.css](minima.css) and save it to your styles folder.
-2. Include the style in your html header with `<link rel="stylesheet" href="/{your styles folder}/minima.css">`
+2. Include the style in your html header with `<link rel="stylesheet" href="/{your styles directory}/minima.css">`
 3. Use [demo.html](demo.html) as a reference for how the different design elements are used.
 
 ## Features
 
-MinimaCSS supports many design elements such as:
+- No build step
+- No JavaScript dependencies
 - Cards
 - Columnar Grid
 - Forms
@@ -49,8 +49,6 @@ look for `--color-border-input-error`.
 
 MinimaCSS uses `rem` size values. Given the default values in 
 [minima.reset.css](), `1.6rem` will be equivalent to `16px`.
-
-- `--gutter` Used to set the gap between layout boxes.
 
 
 ## Todo
