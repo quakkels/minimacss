@@ -1,8 +1,7 @@
 
 /* Messages */
 
-div.errors {
-	text-transform: uppercase;
+div.error, ul.error li {
 	color: var(--color-error);
 	border: 2px solid var(--color-border-error);
 	border-radius: var(--radius);
@@ -11,7 +10,7 @@ div.errors {
 	margin-bottom:var(--gutter);
 }
 
-div.info {
+div.info, ul.info li {
 	color: var(--color-info);
 	border: 2px solid var(--color-border-info);
 	border-radius: var(--radius);
@@ -20,11 +19,20 @@ div.info {
 	margin-bottom:var(--gutter);
 }
 
-div.warn {
+div.warn, ul.warn li {
 	color: var(--color-warn);
 	border: 2px solid var(--color-border-warn);
 	border-radius: var(--radius);
 	background: var(--color-bg-warn);
 	margin-top:var(--gutter);
 	margin-bottom:var(--gutter);
+}
+
+ul.error, ul.info, ul.warn {
+	list-style: none;
+}
+
+ul.error li, ul.info li, ul.warn li {
+	margin: 1rem 0;
+	padding: 1rem;
 }

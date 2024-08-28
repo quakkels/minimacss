@@ -8,19 +8,19 @@
 	--bg-content: #333;
 	--bg-accent: #222;
 	--text-color: #ddd;
-	--action-primary: cornflowerblue;
+	--action-primary: #29d;
   --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
 	/* messages */
-	--color-info: #eee;
-	--color-border-info: #ccf;
-	--color-bg-info: #00AEEF;
-	--color-warn: #024;
+	--color-info: #000;
+	--color-border-info: #cef;
+	--color-bg-info: #3df;
+	--color-warn: #000;
 	--color-border-warn: #ffc;
 	--color-bg-warn: #FFF568;
 	--color-error: #eee;
-	--color-border-error: #fdd;
-	--color-bg-error: #f33;
+	--color-border-error: #fdf;
+	--color-bg-error: #f35;
 
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
