@@ -45,21 +45,6 @@
 	align-items: center;
 }
 
-/* layout masthead */
-
-.masthead {
-	border: 1px solid transparent;
-	background: var(--bg-accent);
-	text-align: center;
-}
-.masthead h1 {
-	font-size: calc(2rem + 2.7vw);
-}
-.masthead p {
-	font-size: calc(1rem + 1vw);
-	width:68vw;
-	margin:0 auto;
-}
 
 /* layout cards */
 

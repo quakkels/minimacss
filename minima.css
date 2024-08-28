@@ -8,19 +8,19 @@
 	--bg-content: #333;
 	--bg-accent: #222;
 	--text-color: #ddd;
-	--action-primary: cornflowerblue;
+	--action-primary: #29d;
   --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
 	/* messages */
-	--color-info: #eee;
-	--color-border-info: #ccf;
-	--color-bg-info: #00AEEF;
-	--color-warn: #024;
+	--color-info: #000;
+	--color-border-info: #cef;
+	--color-bg-info: #3df;
+	--color-warn: #000;
 	--color-border-warn: #ffc;
 	--color-bg-warn: #FFF568;
 	--color-error: #eee;
-	--color-border-error: #fdd;
-	--color-bg-error: #f33;
+	--color-border-error: #fdf;
+	--color-bg-error: #f35;
 
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
@@ -113,21 +113,6 @@ textarea {
 	align-items: center;
 }
 
-/* layout masthead */
-
-.masthead {
-	border: 1px solid transparent;
-	background: var(--bg-accent);
-	text-align: center;
-}
-.masthead h1 {
-	font-size: calc(2rem + 2.7vw);
-}
-.masthead p {
-	font-size: calc(1rem + 1vw);
-	width:68vw;
-	margin:0 auto;
-}
 
 /* layout cards */
 
@@ -362,8 +347,7 @@ textarea {
 
 /* Messages */
 
-div.errors {
-	text-transform: uppercase;
+div.error, ul.error li {
 	color: var(--color-error);
 	border: 2px solid var(--color-border-error);
 	border-radius: var(--radius);
@@ -372,7 +356,7 @@ div.errors {
 	margin-bottom:var(--gutter);
 }
 
-div.info {
+div.info, ul.info li {
 	color: var(--color-info);
 	border: 2px solid var(--color-border-info);
 	border-radius: var(--radius);
@@ -381,11 +365,20 @@ div.info {
 	margin-bottom:var(--gutter);
 }
 
-div.warn {
+div.warn, ul.warn li {
 	color: var(--color-warn);
 	border: 2px solid var(--color-border-warn);
 	border-radius: var(--radius);
 	background: var(--color-bg-warn);
 	margin-top:var(--gutter);
 	margin-bottom:var(--gutter);
+}
+
+ul.error, ul.info, ul.warn {
+	list-style: none;
+}
+
+ul.error li, ul.info li, ul.warn li {
+	margin: 1rem 0;
+	padding: 1rem;
 }
