@@ -21,6 +21,10 @@
 	--color-error: #eee;
 	--color-border-error: #fdf;
 	--color-bg-error: #f35;
+	
+	/* tables */
+	--color-border-table: #222;
+	--color-bg-th: #222;
 
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
@@ -53,9 +57,6 @@ html {
 
 body {
   box-sizing: border-box;
-  font-size: 1rem;
-	font-family: var(--font-family);
-	color: var(--text-color);
 	background: var(--bg);
 }
 
@@ -158,19 +159,24 @@ textarea {
 /* Typography */
 
 body {
-  color: var(--text-color);
+	letter-spacing: 0.05rem;
+	line-height: 1.5rem;
+  font-size: 1rem;
+	font-family: var(--font-family);
+	color: var(--text-color);
 }
 
 h1, h2, h3 {
+	margin: 1.5rem 0;
   color: var(--text-color);
 }
 
 p {
-	margin: 2rem 0rem;
+	margin: 1.5rem 0rem;
 }
 
 ul, ol {
-	margin: 2rem 0rem;
+	margin: 1.5rem 0rem;
 }
 
 li {
@@ -381,4 +387,55 @@ ul.error, ul.info, ul.warn {
 ul.error li, ul.info li, ul.warn li {
 	margin: 1rem 0;
 	padding: 1rem;
+}
+
+/* tables */
+
+div.table {
+	overflow-x: scroll;
+	width: 100%;
+	margin: var(--gutter) 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid var(--color-border-table);
+	margin: var(--gutter) 0;
+}
+
+div.table table {
+	margin:0;
+}
+
+caption {
+	padding-top: 0.75rem;
+	font-style: italic;
+	caption-side: bottom;
+	text-align: right;
+}
+
+th {
+	white-space: nowrap;
+	background: var(--color-bg-th)
+}
+
+th,
+td {
+	padding: 1rem;
+	vertical-align: top;
+	border: 1px solid var(--color-border-table);
+}
+
+th.right,
+td.right {
+	text-align: right;
+}
+
+tr:nth-child(odd) {
+	background-color: var(--bg-accent);
+}
+
+tr:nth-child(odd) {
+	background-color: var(--bg-content);
 }

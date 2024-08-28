@@ -2,19 +2,24 @@
 /* Typography */
 
 body {
-  color: var(--text-color);
+	letter-spacing: 0.05rem;
+	line-height: 1.5rem;
+  font-size: 1rem;
+	font-family: var(--font-family);
+	color: var(--text-color);
 }
 
 h1, h2, h3 {
+	margin: 1.5rem 0;
   color: var(--text-color);
 }
 
 p {
-	margin: 2rem 0rem;
+	margin: 1.5rem 0rem;
 }
 
 ul, ol {
-	margin: 2rem 0rem;
+	margin: 1.5rem 0rem;
 }
 
 li {

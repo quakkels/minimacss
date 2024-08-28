@@ -21,6 +21,10 @@
 	--color-error: #eee;
 	--color-border-error: #fdf;
 	--color-bg-error: #f35;
+	
+	/* tables */
+	--color-border-table: #222;
+	--color-bg-th: #222;
 
 	/* forms */
 	--bg-input: hsl(from var(--bg-content) h s 33.33%);
