@@ -9,18 +9,24 @@
 	--bg-accent: #222;
 	--text-color: #ddd;
 	--action-primary: #29d;
+	--action-secondary: #ccc;
+	--action-danger: #f35;
+	--action-warn: #FFF568;
+	--action-info: #3df;
   --font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
 	/* messages */
 	--color-info: #000;
 	--color-border-info: #cef;
-	--color-bg-info: #3df;
+	--color-bg-info: var(--action-info);
+
 	--color-warn: #000;
 	--color-border-warn: #ffc;
-	--color-bg-warn: #FFF568;
+	--color-bg-warn: var(--action-warn);
+
 	--color-error: #eee;
 	--color-border-error: #fdf;
-	--color-bg-error: #f35;
+	--color-bg-error: var(--action-danger);
 	
 	/* tables */
 	--color-border-table: #222;
