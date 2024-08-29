@@ -38,5 +38,9 @@
 	/* layout */
 	--gutter: 2rem;
 	--radius: 0.4rem;
+
+	/* scrollbars */
+	--color-bg-scrollbar: var(--bg);
+	--color-thumb-scrollbar: var(--bg-accent);
 }
 
