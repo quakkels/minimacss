@@ -85,9 +85,9 @@
 								</p>
 							</div>
 							<p>
-								<button class="box-button">This is a button tag that fills the space</button>
+								<button type="button" class="box-button">This is a button tag that fills the space</button>
 							</p>
-							<a href="#" class="button box-button">This is an anchor tag as a button that fills the space</a>
+							<a class="button box-button">This is an anchor tag as a button that fills the space</a>
 						</div>
 					</div>
 					<div class="card">
@@ -158,7 +158,7 @@
 				<div class="gutter">
 					<h2>Tables</h2>
 					<div class="table">
-						<table>
+					<table>
 							<caption>This table is wide, and must be scrollable in narrow displays.</caption>
 							<tr>
 								<th>Header One</th>
@@ -209,14 +209,14 @@
 					</div>
 					<table>
 						<caption>Table Caption</caption>
-						<thead>
+					<thead>
 							<tr>
 								<th scope="col">thead th</th>
 								<th scope="col">thead th</th>
 								<th scope="col">thead th</th>
 							</tr>
 						</thead>
-						<tbody>
+					<tbody>
 							<tr>
 								<td>tbody td</td>
 								<td>tbody td</td>
@@ -238,14 +238,14 @@
 					<h2>Table with side headings</h2>
 					<table>
 						<caption>Table Caption</caption>
-						<thead>
+					<thead>
 							<tr>
 								<th scope="col">thead th</th>
 								<th scope="col">thead th</th>
 								<th scope="col" class="right">thead th</th>
 							</tr>
 						</thead>
-						<tbody>
+					<tbody>
 							<tr>
 								<th scope="row">tbody th</th>
 								<td>tbody td</td>
@@ -257,7 +257,7 @@
 								<td class="right">tbody td</td>
 							</tr>
 						</tbody>
-						<tfoot>
+					<tfoot>
 							<tr>
 								<th scope="row">Footer th</th>
 								<td colspan="2" class="right">Total</td>
@@ -317,7 +317,7 @@
 			<section class="region" id="forms">
 				<div style="width:60vw;" class="gutter center-self">
 					<h2>Forms</h2>
-				<form>
+					<form>
 						<div class="grid-container with-two-columns">
 							<p>
 								<label for="email">Email Address</label>
@@ -399,18 +399,63 @@
 			</section>
 			<section class="region" style="background: var(--bg-accent);" id="buttons">
 				<div class="gutter">
-					<button>Primary Button</button>
-					<button class="secondary">Secondary Button</button>
-					<button class="info">Info Button</button>
-					<button class="warn">Warn Button</button>
-					<button class="danger">Danger Button</button>
-					<button class="transparent">Transparent Button</button><br>
-					<a class="button">Primary Anchor</a>
-					<a class="button secondary">Secondary Anchor</a>
-					<a class="button info">Info Anchor</a>
-					<a class="button warn">Warn Anchor</a>
-					<a class="button danger">Danger Anchor</a>
-					<a class="button transparent">Transparent Anchor</a><br>
+					<h2>Buttons using &lt;button&gt;</h2>
+					<p>
+						<button type="button">Primary Button</button>
+						<button type="button" class="secondary">Secondary Button</button>
+						<button type="button" class="info">Info Button</button>
+						<button type="button" class="warn">Warn Button</button>
+						<button type="button" class="danger">Danger Button</button>
+						<button type="button" class="transparent">Transparent Button</button>
+					</p>
+					<p>
+						<button type="button" class="loading">Primary Button</button>
+						<button type="button" class="secondary loading">Secondary Button</button>
+						<button type="button" class="info loading">Info Button</button>
+						<button type="button" class="warn loading">Warn Button</button>
+						<button type="button" class="danger loading">Danger Button</button>
+						<button type="button" class="transparent loading">Transparent Button</button>
+					</p>
+					<h2>Buttons using &lt;a&gt;</h2>
+					<p>
+						<a class="button">Primary Anchor</a>
+						<a class="button secondary">Secondary Anchor</a>
+						<a class="button info">Info Anchor</a>
+						<a class="button warn">Warn Anchor</a>
+						<a class="button danger">Danger Anchor</a>
+						<a class="button transparent">Transparent Anchor</a>
+					</p>
+					<p>
+						<a class="button loading">Primary Anchor</a>
+						<a class="button secondary loading">Secondary Anchor</a>
+						<a class="button info loading">Info Anchor</a>
+						<a class="button warn loading">Warn Anchor</a>
+						<a class="button danger loading">Danger Anchor</a>
+						<a class="button transparent loading">Transparent Anchor</a>
+					</p>
+					<h2>Call To Action Buttons using &lt;div&gt; and the button class</h2>
+					<div class="grid-container with-two-columns">
+						<div>
+							<div class="wrapper-button-calltoaction center-self">
+							<button type="button">Button</button>
+							</div>
+						</div>
+						<div>
+							<div class="wrapper-button-calltoaction center-self">
+								<a class="button">Anchor</a>
+							</div>
+						</div>
+						<div>
+							<div class="wrapper-button-calltoaction silver center-self">
+							<button type="button">Button</button>
+							</div>
+						</div>
+						<div>
+							<div class="wrapper-button-calltoaction silver center-self">
+								<a class="button">Anchor</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>

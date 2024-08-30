@@ -11,10 +11,11 @@ button, .button, a.button {
 	text-align:center;
 	cursor:pointer;
 	font-size: 1.25rem;
-	color: var(--text-color);
+	color: #fff;
 	text-shadow:0px 0px 1rem hsl(from var(--action-primary) h s 0%);
 	user-select:none;
 	border-radius: var(--radius);
+	position:relative;
 }
 
 button:active, .button:active {
@@ -55,3 +56,92 @@ button.box-button, .button.box-button {
 	margin: 0;
 }
 
+/* loading indicator */
+button.loading, .button.loading {
+	cursor:wait;
+	color: #FFFFFF44
+}
+button.secondary.loading, .button.secondary.loading,
+button.info.loading, .button.info.loading,
+button.warn.loading, .button.warn.loading {
+	color: #00000044
+}
+
+button.loading::after,
+.button.loading::after {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border: 4px solid transparent;
+	border-top-color: #ffffff;
+	border-radius: 50%;
+	animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+/* flashy animated call-to-action button */
+.wrapper-button-calltoaction {
+	background:linear-gradient(152deg, orange 0%, yellow 12.5%, white 25%, yellow 37.5%, orange 50%, yellow 62.5%, white 75%, yellow 87.5%, orange 99%);
+	width: 11rem;
+	height: 6rem;
+	position:relative;
+	animation: gradient 15s linear infinite;
+}
+.wrapper-button-calltoaction.silver {
+	background:linear-gradient(152deg, gray 0%, silver 12.5%, white 25%, silver 37.5%, gray 50%, silver 62.5%, white 75%, silver 87.5%, gray 99%);
+}
+
+.wrapper-button-calltoaction::before {
+	content:'';
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:100%;
+	height:100%;
+	background: inherit;
+	filter: blur(0.4rem)
+}
+
+.wrapper-button-calltoaction button,
+.wrapper-button-calltoaction .button {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 10.75rem;
+	height: 5.75rem;
+	line-height: 5.75rem;
+	padding:0;
+	margin:0;
+	background-color:#000;
+	background-image: linear-gradient(155deg, #000 0%, #1f1f1f 74%);
+}
+.wrapper-button-calltoaction button:active,
+.wrapper-button-calltoaction .button:active {
+	background-image: linear-gradient(155deg, #1f1f1f 0%, #000 74%);
+}
+
+@keyframes gradient {
+0% {
+	background-position: 0 0;
+}
+100% {
+	background-position: 20rem 20rem;
+}
+}
