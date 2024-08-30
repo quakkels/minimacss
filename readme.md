@@ -60,7 +60,7 @@ MinimaCSS uses `rem` size values. Given the default values in
 - [x] error message list style
 - [x] table style
 - [x] scrollbar style
-- [ ] dynamic call-to-action button styles and demo
+- [x] dynamic call-to-action button styles and demo
 - [ ] refine configuration variable names for clarity
 - [ ] document configuration values
 
